@@ -1,5 +1,4 @@
 class Calculator{
-    //Maybe change number to results later on for semantic clarity?
     constructor(result){
         this.result = result;
     }
@@ -27,6 +26,10 @@ class Calculator{
     equal(){
         return this.result;
     }
+    cleared(){
+        this.result = 0;
+        return this;
+    }
 }
 
 //Manual testing.
@@ -40,5 +43,7 @@ class Calculator{
 // const mycalculator2 = new Calculator(0);
 // console.log("My result: " + mycalculator2.add(5).add(5)); //results should be 10
 
-const mycalculator2 = new Calculator(0);
-console.log("My result: " + mycalculator2.add(5).subtract(5).multiply(5).equal()); //results should be 10
+//const mycalculator2 = new Calculator(0);
+//console.log("My result: " + mycalculator2.add(15).subtract(10).multiply(5).cleared().add(5).equal()); //results should be 10
+
+module.exports = Calculator;
