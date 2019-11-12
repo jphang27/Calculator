@@ -11,6 +11,21 @@ describe('Calculator', () => {
     expect(subject.add).toBeDefined()
   });
 
+  test('has subtract function', () => {
+    const subject = new Calculator(0);
+    expect(subject.subtract).toBeDefined()
+  });
+
+  test('has multiply function', () => {
+    const subject = new Calculator(0);
+    expect(subject.multiply).toBeDefined()
+  });
+
+  test('has divide function', () => {
+    const subject = new Calculator(0);
+    expect(subject.divide).toBeDefined()
+  });
+
   test('add 15', () => {
     const subject = new Calculator(0);
     expect(subject.add(15).equal()).toBe(15)
