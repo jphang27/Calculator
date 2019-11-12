@@ -6,20 +6,23 @@ class Calculator{
 
      add(num){
          this.result += num;
-         return this.result;
+         return this;
     }
 
-    subtract(num1, num2){
-        return this.result = num1-num2;
+    subtract(num){
+        this.result  -= num;
+        return this;
     }
-    multiply(num1, num2){
-        return this.result = num1*num2;
+
+    multiply(num){
+        this.result *= num;
+        return this;
     }
-    divide(num1, num2){
-        if(num2 === 0){
+    divide(num){
+        if(num === 0){
             return undefined;
         }
-        return this.result = num1/num2;
+        return this;
     }
     equal(){
         return this.result;
@@ -38,4 +41,4 @@ class Calculator{
 // console.log("My result: " + mycalculator2.add(5).add(5)); //results should be 10
 
 const mycalculator2 = new Calculator(0);
-console.log("My result: " + mycalculator2.equal()); //results should be 0
+console.log("My result: " + mycalculator2.add(5).subtract(5).multiply(5).equal()); //results should be 10
