@@ -52,25 +52,31 @@ class Calculator{
                     num2 = Number.parseInt(arr2.pop());
                     num1 = Number.parseInt(arr2.pop());
                     total = num1 + num2;
+                    arr2.push(total);
                     break;
                 case '-':
                     arr2.pop();
                     num2 = Number.parseInt(arr2.pop());
                     num1 = Number.parseInt(arr2.pop());
                     total = num1 - num2;
+                    arr2.push(total);
                     break;
                 case '*':
                     arr2.pop();
                     num2 = Number.parseInt(arr2.pop());
                     num1 = Number.parseInt(arr2.pop());
                     total = num1 * num2;
+                    arr2.push(total);
                     break;
                 case '/':
                     arr2.pop();
                     num2 = Number.parseInt(arr2.pop());
                     num1 = Number.parseInt(arr2.pop());
                     total = num1 / num2;
-                    break; 
+                    arr2.push(total);
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -78,14 +84,5 @@ class Calculator{
         return this.result;
     }
 }
-
-const calculators = new Calculator();
-// console.log(calculators.equal());
-console.log(calculators.rpn());
-console.log(calculators.rpn("1 2 + "));
-console.log(calculators.rpn("2 1 - "));
-console.log(calculators.rpn("2 1 * "));
-console.log(calculators.rpn("2 2 / "));
-console.log(calculators.rpn(""))
 
 module.exports = Calculator;

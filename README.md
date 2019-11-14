@@ -23,4 +23,8 @@ EX 2: '(new Calculator().rpn()) // => 0'
 EX 3: '(new Calculator().rpn('1 2 +') //=> 3'
 EX 4: '(new Calculator()).rpn('1 2 + 7 - 2 *') //=> -8'
 
-Chaining is not a requirement for the 'rpn' method.
+Chaining is not a requirement for the 'rpn' method. When you complete these requirements, attempt the following additional requirements. These requirements are optional, but will be reviewed separately from those above if submitted.
+
+- Extract the functionality into a new class to separate the standard 'Calculator' from the RPN version.
+- Refactor your testts as needed to support this change.
+- Prove that everything still works.

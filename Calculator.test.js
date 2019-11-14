@@ -76,11 +76,11 @@ describe('Calculator', () => {
     expect(subject.rpn("2 1 *")).toBe(2)
   });
 
-  test('RPN function with division works', () => {
+  test('RPN function with multiple inputs works', () => {
     const subject = new Calculator(0);
-    expect(subject.rpn("2 2 /")).toBe(1)
+    expect(subject.rpn("1 2 + 3 - 4 5 + 5 *")).toBe(45)
   });
 
-  
+
 
 })
