@@ -1,4 +1,4 @@
-Build a Calculator in Node, Part 1
+#**Build a Calculator in Node, Part 1**
 
 Create a Calculator Class. The constructor should receive a starting number. Then, calculation methods may be chained on the new instance. Finally, a value is returned when the 'equals' method is exeucted. 'equals' outputs, it does not clear the register.
 
@@ -11,7 +11,7 @@ Calling 'clear' on the instance should reset the calculated value to 0.
 
 EX 2: '(new Calculator(5)).clear().add(3).equals() // => 3'
 
-Build a Calculator in Node, Part 2
+#**Build a Calculator in Node, Part 2**
 
 Your calculator should be able to handle more than one operator, so '1 2 + 7 -' would evaluate to '-4' and
 '1 2 + 7 - 2 *' would give '-8'
