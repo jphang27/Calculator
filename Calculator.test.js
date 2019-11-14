@@ -56,6 +56,11 @@ describe('Calculator', () => {
     expect(subject.add(5).cleared().add(5).equal()).toBe(5)
   });
 
+  test('RPN function with no input returns 0', () => {
+    const subject = new Calculator(0);
+    expect(subject.rpn()).toBe(0)
+  });
+
   test('RPN function with addition works', () => {
     const subject = new Calculator(0);
     expect(subject.rpn("1 2 +")).toBe(3)
@@ -68,12 +73,14 @@ describe('Calculator', () => {
 
   test('RPN function with multiplcation works', () => {
     const subject = new Calculator(0);
-    expect(subject.rpn("1 2 *")).toBe(2)
+    expect(subject.rpn("2 1 *")).toBe(2)
   });
 
   test('RPN function with division works', () => {
     const subject = new Calculator(0);
     expect(subject.rpn("2 2 /")).toBe(1)
   });
+
+  
 
 })

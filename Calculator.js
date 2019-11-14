@@ -33,33 +33,59 @@ class Calculator{
     }
     rpn(string){
         //First to check if empty string then return 0;
-        if(string === ""){
-            console.log("this is: " + this.result);
-            this.result = "0";
-            return this.result;
+        if(string === undefined){
+            return 0;
         }
 
         //Convert string to an array.
         //Switch statement helps identify which arthimetic to execute
-        let arr = string.split(); //Split string into array
+        let arr = string.split(" "); //Split string into array
+        let arr2 = [];
+        let num1;
+        let num2;
+        let total;
         for(let i = 0; i < arr.length; i++){
-            let arr2 = arr[i];
-        switch(arr2){
-            case '+': container = parseInt(arr2[i].toString()) + parseInt(arr2[i + 1].toString());
-            return container;
+            arr2.push(arr[i]);
+            switch(arr[i]){
+                case '+': 
+                    arr2.pop();
+                    num2 = Number.parseInt(arr2.pop());
+                    num1 = Number.parseInt(arr2.pop());
+                    total = num1 + num2;
+                    break;
+                case '-':
+                    arr2.pop();
+                    num2 = Number.parseInt(arr2.pop());
+                    num1 = Number.parseInt(arr2.pop());
+                    total = num1 - num2;
+                    break;
+                case '*':
+                    arr2.pop();
+                    num2 = Number.parseInt(arr2.pop());
+                    num1 = Number.parseInt(arr2.pop());
+                    total = num1 * num2;
+                    break;
+                case '/':
+                    arr2.pop();
+                    num2 = Number.parseInt(arr2.pop());
+                    num1 = Number.parseInt(arr2.pop());
+                    total = num1 / num2;
+                    break; 
+            }
         }
-    }
 
-
-        // let arr = [];
-        // switch(arr){
-        //     case: '+'
-        // }
+        this.result = total;
+        return this.result;
     }
 }
 
 const calculators = new Calculator();
 // console.log(calculators.equal());
-console.log(calculators.rpn("1 2 +"));
+console.log(calculators.rpn());
+console.log(calculators.rpn("1 2 + "));
+console.log(calculators.rpn("2 1 - "));
+console.log(calculators.rpn("2 1 * "));
+console.log(calculators.rpn("2 2 / "));
+console.log(calculators.rpn(""))
 
 module.exports = Calculator;
